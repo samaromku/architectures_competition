@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import kotlinx.android.synthetic.main.activity_mvvm.*
+import kotlinx.android.synthetic.main.activity_main.*
 import ru.appngo.architecturetest.R
 import ru.appngo.architecturetest.data.DataRepository
 
@@ -20,7 +20,7 @@ class MvvmActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvvm)
+        setContentView(R.layout.activity_main)
 
 
         val model = ViewModelProvider(this).get(MvvmViewModel::class.java)

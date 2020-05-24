@@ -14,12 +14,15 @@ class MvvmPresenter(
      * Advantages:
      * don't have to switch to main thread, as in library there is annotation @MainThread
      * ViewModel survives on lifeCycle changes
+     * View is not passed in presenter's constructor
      *
      * Disadvantages:
+     * There is an implicit dependency BTW view and ViewModel
      *
      *
      * Has opposite pros and cons:
      * View can be controlled by states. However, with time there will be a lot of them and they need to be combined
+     * Contract for view is not defined
      */
     override fun onStart() {
         if (model.state !is OnCreate) {

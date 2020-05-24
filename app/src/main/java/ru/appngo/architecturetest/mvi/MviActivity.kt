@@ -1,4 +1,4 @@
-package ru.appngo.architecturetest.mvp
+package ru.appngo.architecturetest.mvi
 
 import android.app.ProgressDialog
 import android.os.Bundle
@@ -9,12 +9,12 @@ import ru.appngo.architecturetest.R
 import ru.appngo.architecturetest.data.DataRepository
 import ru.appngo.architecturetest.data.SomeTestData
 
-class MvpActivity : AppCompatActivity(), MvpContract.View {
+class MviActivity : AppCompatActivity(), MviContract.View {
 
     private val dialog: ProgressDialog by lazy {
         ProgressDialog(this)
     }
-    private val presenter = MvpPresenter(this, DataRepository())
+    private val presenter = MviPresenter(this, DataRepository())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,19 +22,29 @@ class MvpActivity : AppCompatActivity(), MvpContract.View {
         presenter.onStart()
     }
 
-    override fun showProgress() {
+    override fun render(state: MviViewState) {
+        when (state) {
+            InProgress -> showProgress()
+            is OnError -> showError(state.error)
+            is OnResponse -> showResult(state.someTestData)
+        }
+    }
+
+    private fun showProgress() {
         dialog.show()
     }
 
-    override fun hideProgress() {
+    private fun hideProgress() {
         dialog.dismiss()
     }
 
-    override fun showResult(someTestData: SomeTestData) {
+    private fun showResult(someTestData: SomeTestData) {
+        hideProgress()
         result_text.text = "result"
     }
 
-    override fun showError(error: String) {
+    private fun showError(error: String) {
+        hideProgress()
         Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
     }
 }
