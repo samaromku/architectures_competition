@@ -1,3 +1,31 @@
 
 l
 <app/src/main/java/ru/appngo/architecturetest/MainActivity.kt,5/a/5ab49a9545621afaee6bb57c8229e85373bc9ade
+o
+?app/src/main/java/ru/appngo/architecturetest/mvp/MvpContract.kt,1/8/1802b76f3f7630646a6047e9e14169131ddcc81e
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+p
+@app/src/main/java/ru/appngo/architecturetest/mvp/MvpPresenter.kt,6/6/66ae9f70278e13f73b5319dbf64f185f485c7976
+s
+Capp/src/main/java/ru/appngo/architecturetest/data/DataRepository.kt,2/d/2d87cfd63e45b755b8c5b25b6a48430b679d6497
+q
+Aapp/src/main/java/ru/appngo/architecturetest/mvvm/MvvmContract.kt,3/6/368ee137e117370db62621630c95a5938ca0acc1
+r
+Bapp/src/main/java/ru/appngo/architecturetest/mvvm/MvvmViewModel.kt,f/6/f6cc252f037cda71bce6e5d9067c1a07c1b72f3f
+o
+?app/src/main/java/ru/appngo/architecturetest/mvi/MviActivity.kt,2/a/2ae08e6dc3015f48051f2f8897ba79c46dc96ab7
+o
+?app/src/main/java/ru/appngo/architecturetest/mvp/MvpActivity.kt,8/4/8424e886d26cb9988aac8ab286a92516984183a2
+q
+Aapp/src/main/java/ru/appngo/architecturetest/mvvm/MvvmActivity.kt,f/d/fd6f628f0508db422196f3980df9e46298d25d9d
+r
+Bapp/src/main/java/ru/appngo/architecturetest/mvvm/MvvmPresenter.kt,f/0/f0ea2c3d3c79daa32e06c4345eb30ac8c75e96da
+Y
+)app/src/main/res/layout/activity_main.xml,7/6/76b07e40f24cce093536731477540f12e7da3cb6
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+p
+@app/src/main/java/ru/appngo/architecturetest/mvi/MviPresenter.kt,9/8/988bc49e414d0610aeb5e971c2707349ecc51a55
+o
+?app/src/main/java/ru/appngo/architecturetest/mvi/MviContract.kt,f/4/f4c38c8736b241a17904aa02de8a9f905a9cd498
